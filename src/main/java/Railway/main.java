@@ -458,15 +458,15 @@ public class main extends javax.swing.JFrame {
         
         
         try {
-            pst = con.prepareStatement("insert into passengerdetails(PID,PNAME,PAGE,PAG,TNAME,ORIGIN,DESTINATION,CTYPE,DOJ)values(?,?,?,?,?,?,?,?,?)");
+            pst = con.prepareStatement("insert into passengerdetails(PID,PNAME,PAGE,PAG,TNAME,CTYPE,ORIGIN,DESTINATION,DOJ)values(?,?,?,?,?,?,?,?,?)");
             pst.setString(1, PID);
             pst.setString(2, PNAME);
             pst.setString(3, PAGE);
             pst.setString(4, PAG);
             pst.setString(5, TNAME);
-            pst.setString(6, ORIGIN);
-            pst.setString(7, DESTINATION);
-            pst.setString(8, CTYPE);
+            pst.setString(6, CTYPE);
+            pst.setString(7, ORIGIN);
+            pst.setString(8, DESTINATION);
             pst.setString(9, DOJ);
             
             int k = pst.executeUpdate();
