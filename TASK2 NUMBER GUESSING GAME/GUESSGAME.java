@@ -30,7 +30,7 @@ class GUESSGAME {
                     System.out.println("Number is Too high.");
                 } else {
                     hasGuessedCorrectly = true;
-                    System.out.println("Congratulations! You guessed the number in " + numberOfTries + " tries.");
+                    System.out.println("Congratulation, You Guessed The Number Correctly " + numberOfTries + " tries.");
                     int roundScore = maxTries - numberOfTries + 1; // Award points based on attempts
                     totalScore += roundScore;
                     System.out.println("Round Score: " + roundScore);
