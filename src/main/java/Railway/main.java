@@ -523,18 +523,32 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
        
         
+       if (!ID.getText().isEmpty() &&
+        !NAME.getText().isEmpty() &&
+        !AGE.getText().isEmpty() &&
+        !GEND.getText().isEmpty() &&
+        !TRAINN.getText().isEmpty() &&
+        !CTP.getText().isEmpty() &&
+        !ORG.getText().isEmpty() &&
+        !DST.getText().isEmpty() &&
+        !DJ.getText().isEmpty())
+{
+ 
         View f = new View();
         f.p1.setText(ID.getText());
         f.p2.setText(NAME.getText());
         f.p3.setText(AGE.getText());
         f.p4.setText(GEND.getText());
         f.p5.setText(TRAINN.getText());
-        f.p6.setText(POR.getText());
-        f.p7.setText(DEST.getText());
-        f.p8.setText(CTP.getText());
+        f.p6.setText(CTP.getText());
+        f.p7.setText(ORG.getText());
+        f.p8.setText(DST.getText());
         f.p9.setText(DJ.getText());
-           // this.hide();
-           f.setVisible(true);
+        f.setVisible(true);
+    } else {
+        // Fields are not all filled, show a dialog box with the message "No ticket found"
+        JOptionPane.showMessageDialog(this, "No Ticket Found");
+    }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
